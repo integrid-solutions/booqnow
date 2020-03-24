@@ -69,6 +69,8 @@ mix.combine([
 ], 'assets/css/vendor.css').version();
 
 mix.combine([
+  'src/js/vendor-js/web/assets/jquery/jquery.min.js',
+  'src/js/vendor-js/web/assets/lazyload/lazyload.js',
   'src/js/vendor-js/popper/popper.min.js',
   'src/js/vendor-js/tether/tether.min.js',
   'src/js/vendor-js/bootstrap/js/bootstrap.min.js',

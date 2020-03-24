@@ -46,6 +46,7 @@ body {
 
 .section-inner {
   padding: 120px 16px;
+  min-height: 100vh;
 
   &.form {
     .section-inner-title {
