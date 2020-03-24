@@ -1,0 +1,63 @@
+{{ define "main" }}
+<section class="section-inner form">
+    <div class="custom-container">
+        <div class="section-inner-title">
+            <h2>Add New Service</h2>
+        </div>
+        <div class="add-service-form">
+            <form name="contact" method="POST" data-netlify="true">
+                <div class="form-group required">
+                    <label>Service Name</label>
+                    <input type="text" name="name" required />
+                </div>
+
+                <div class="form-group required">
+                    <label>Service Detail</label>
+                    <textarea name="detail" id="" cols="30" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Service Photo Link</label>
+                    <input type="text" name="photo" />
+                </div>
+
+                <div class="form-group required">
+                    <label>Location</label>
+                    <input type="text" name="location" required />
+                </div>
+
+                <div class="form-group required">
+                    <h3>Contact Details</h3>
+
+                    <div class="form-group-inner">
+                        <div class="form-group-list">
+                            <label>Phone</label>
+                            <input type="number" name="phone" required />
+                        </div>
+                        <div class="form-group-list">
+                            <label>Website</label>
+                            <input type="text" name="website" required />
+                        </div>
+                        <div class="form-group-list">
+                            <label>Email</label>
+                            <input type="email" name="email" required />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Delivery Available</label>
+                    <select name="delivery[]">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-submit text-center">
+                    <button class="btn btn-primary" type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{{ end }}
