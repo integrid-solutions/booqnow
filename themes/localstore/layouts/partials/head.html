@@ -1,0 +1,34 @@
+<head itemscope itemtype="{{ .Site.BaseURL }}">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    {{ partial "favicon" .}}
+    {{ partial "seo" .}}
+
+    {{ hugo.Generator }}
+
+    {{ "<!-- Main Stylesheet --> " | safeHTML }}
+
+    {{- $stylesheet := resources.Get "css/vendor.css" | minify | fingerprint }}
+    {{- with $stylesheet }}
+    <link rel="stylesheet" href="{{ .Permalink | relURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{ $.Scratch.Set "stylesheet" . }}
+    {{ end }}
+
+    {{- $stylesheet := resources.Get "css/app.css" | minify | fingerprint }}
+    {{- with $stylesheet }}
+    <link rel="stylesheet" href="{{ .Permalink | relURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{ $.Scratch.Set "stylesheet" . }}
+    {{ end }}
+
+    <script>document.documentElement.className = 'js';
+    var supportsCssVars = function () {
+      var e, t = document.createElement('style');
+      return t.innerHTML = 'root: { --tmp-var: bold; }', document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports('font-weight', 'var(--tmp-var)')), t.parentNode.removeChild(t), e;
+    };
+    supportsCssVars() || console.log('Please view this demo in a modern browser that supports CSS Variables.');</script>
+
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5e61de19d055270012e87e72&cms=website' async='async'></script>
+</head>

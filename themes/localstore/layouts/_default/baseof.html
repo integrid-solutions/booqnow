@@ -1,0 +1,55 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#" lang="{{ .Language }}">
+
+{{ partial "head.html" .}}
+
+<body class="antialiased bg-body-color font-sans text-base text-base-color leading-relaxed font-medium">
+
+{{ partial "header" .}}
+
+<main>
+    {{ block "main" .}} {{end}}
+</main>
+
+{{ partial "footer" .}}
+
+<!-- Scripts -->
+{{ $scripts := resources.Get "js/manifest.js" | fingerprint }}
+{{ with $scripts }}
+<script type="text/javascript" src="{{ .Permalink | relURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" defer></script>
+{{ $.Scratch.Set "$scripts" . }}
+{{ end }}
+
+{{ $scripts := resources.Get "js/vendor.js" | fingerprint }}
+{{ with $scripts }}
+<script type="text/javascript" src="{{ .Permalink | relURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" defer></script>
+{{ $.Scratch.Set "$scripts" . }}
+{{ end }}
+
+{{ $scripts := resources.Get "js/vendor-other.js" | fingerprint }}
+{{ with $scripts }}
+<script type="text/javascript" src="{{ .Permalink | relURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" defer></script>
+{{ $.Scratch.Set "$scripts" . }}
+{{ end }}
+
+<script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5"></script>
+<script src="https://apis.google.com/js/plusone.js"></script>
+
+{{ $scripts := resources.Get "js/app.js" | fingerprint }}
+{{ with $scripts }}
+<script type="text/javascript" src="{{ .Permalink | relURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" defer></script>
+{{ $.Scratch.Set "scripts" . }}
+{{ end }}
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158284036-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158284036-1');
+</script>
+</body>
+
+</html>
