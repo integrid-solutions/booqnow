@@ -17,9 +17,21 @@ body {
 }
 
 .cid-rU8O0b3nHD {
+  background-color: #464647;
+
   .card-title2 {
     font-size: 24px;
     margin-bottom: 16px;
+  }
+}
+
+.cid-rU8R9b0gWh .container-boxes {
+  background-color: #464647;
+}
+
+.cid-rU8O0b3nHD {
+  .mbr-section-title {
+    color: #fff;
   }
 }
 
@@ -28,6 +40,10 @@ body {
     padding: 0;
     background-color: transparent;
   }
+}
+
+.section-content {
+  margin-top: 40px;
 }
 
 .mbr-section-btn a.btn:not(.btn-form) {
@@ -141,5 +157,39 @@ textarea {
 
 .form-group-list {
   margin-bottom: 1rem;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  a {
+    border: 1px solid #e7e7e7;
+    padding: 10px 16px;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 20px;
+  }
+  .count {
+    margin-left: 8px;
+    display: inline-block;
+    font-weight: 900;
+  }
+}
+
+.mr-2 {
+  margin-right: 8px;
+}
+
+.card-wrapper {
+  a {
+    color: #656565;
+
+    &:hover, &:focus {
+      color: #274abb;
+    }
+  }
 }
 

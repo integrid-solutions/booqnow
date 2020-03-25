@@ -1,13 +1,13 @@
 {{ define "main" }}
-{{ with .Site.GetPage "/listings" }}
-<section class="section-inner">
+
+<section class="section-inner form">
     <div class="custom-container">
         <div class="section-inner-title">
-            <h2>Service Listings</h2>
+            <h2>All {{.Title}}</h2>
         </div>
-        <div class="cid-rU8O0b3nHD">
+        <div class="section-content cid-rU8O0b3nHD">
             <div class="row row-content">
-                {{ range .Pages }}
+                {{ range .Pages}}
                 <div class="card p-3 col-12 col-md-6 col-lg-4">
                     <div class="card-wrapper">
                         <div class="text-box">
@@ -80,5 +80,45 @@ align-items: center">
         </div>
     </div>
 </section>
-{{ end }}
+
+
+<section class="px-16 py-40 pb-120">
+    <div class="container mx-auto">
+        <div class="flex flex-wrap -mx-16 -mb-40">
+            {{ range sort .Pages ".Params.published_date" "desc"}}
+            <div class="w-full md:w-1/2 lg:w-1/3 px-16 mb-40">
+                <div class="card">
+                    <div class="card-image">
+                        <a href="{{.RelPermalink}}" title="{{.Title}}">
+                            <img class=""
+                                 alt="{{.Title}}"
+                                 src="{{.Params.thumbnail}}">
+                        </a>
+                    </div>
+                    <div class="card-header">
+                        <div class="card-title h5 item-title">
+                            <a class="inline-block hover:text-primary item-name" href="{{.RelPermalink}}" title="{{.Title}}">
+                                {{.Title}}
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card-footer tags-link -mb-4">
+                        {{ with .Params.tags }}
+                        {{ range . }}
+                        <a title="{{.}}"
+                           class="text-font-14 text-primary mr-16 {{ . }}"
+                           href="{{"tags/" | absURL }}{{ . | urlize }}">
+                        <span class="chip capitalize">{{ . }}</span>
+                        </a>
+                        {{ end }}
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
 {{ end }}
