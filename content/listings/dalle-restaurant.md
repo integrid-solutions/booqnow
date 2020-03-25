@@ -7,7 +7,7 @@ photo_link = ""
 service_name = "Dalle Restaurant Lalitpur"
 [contact]
 email = ""
-phone = nil
+phone = "015528087"
 website = "https://dalle.com.np/"
 
 +++
