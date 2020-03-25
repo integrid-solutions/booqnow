@@ -1,4 +1,74 @@
 ---
 label: listing
 hide_body: true
-fields: []
+fields:
+- name: service_name
+  type: text
+  config:
+    required: true
+  label: Service Name
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+- name: photo_link
+  type: text
+  config:
+    required: false
+  label: Photo Link
+- name: location
+  type: text
+  config:
+    required: true
+  label: Location
+- name: contact
+  type: field_group
+  config: {}
+  fields:
+  - name: phone
+    type: number
+    label: Phone
+    description: ''
+    default: 0
+    required: true
+    config:
+      min: 
+      max: 
+      step: 
+  - name: website
+    type: text
+    config:
+      required: false
+    label: Website
+  - name: email
+    type: text
+    config:
+      required: false
+    label: Email
+  label: Contact
+- name: delivery
+  type: select
+  default: ''
+  config:
+    required: false
+    options: []
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Delivery
+- name: category
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+    source:
+      type: simple
+  label: Category
