@@ -56,7 +56,9 @@ fields:
   default: ''
   config:
     required: false
-    options: []
+    options:
+    - 'Yes'
+    - 'No'
     source:
       type: simple
       section: 
