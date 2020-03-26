@@ -3,10 +3,13 @@ body {
 }
 
 .cid-rU8RJnzHx1 {
+
   .navbar-dropdown {
     padding-left: 24px;
     padding-right: 24px;
+    background: #994ff3;
   }
+
   .navbar .navbar-collapse {
     justify-content: flex-end;
   }
@@ -17,7 +20,7 @@ body {
 }
 
 .cid-rU8O0b3nHD {
-  background-color: #464647;
+  background-color: #f6efef;
 
   .card-title2 {
     font-size: 24px;
@@ -26,16 +29,18 @@ body {
 }
 
 .cid-rU8R9b0gWh .container-boxes {
-  background-color: #464647;
+  background-color: #f6efef;
 }
 
 .cid-rU8O0b3nHD {
   .mbr-section-title {
-    color: #fff;
+    color: #181818;
   }
 }
 
 .section-inner {
+  background: #f6efef;
+
   .cid-rU8O0b3nHD {
     padding: 0;
     background-color: transparent;
@@ -44,6 +49,21 @@ body {
 
 .section-content {
   margin-top: 20px;
+}
+
+.btn-primary {
+  background: #4fc4cf !important;
+  border-color: #4fc4cf !important;
+}
+
+.btn.btn-md.btn-primary.btn-bgr.display-5 {
+  padding: 16px 50px;
+
+  &:hover, &:focus {
+    background: #29838b!important;
+    border-color: #29838b!important;
+    color: #fff!important;
+  }
 }
 
 .mbr-section-btn a.btn:not(.btn-form) {
@@ -77,17 +97,32 @@ body {
   }
 }
 
+.cid-rU8R9b0gWh {
+  padding-top: 180px;
+  background-image: url('/img/hero-banner.jpg');
+}
+
 .cid-rU8O0b3nHD .text-box {
   min-height: 300px;
 
   p.list-description {
     margin-top: 16px;
-    color: #656565;
+    color: #2e2e2e;
+    line-height: 26px;
   }
 }
 
+.cid-rU8O0b3nHD .card-text {
+  color: #2e2e2e;
+}
+
 .cid-rU8O0b3nHD .card-wrapper {
-  background: #fff;
+  background: #f0e2e1;
+  box-shadow: none;
+}
+
+.cid-rU8O0b3nHD .p-box {
+  background-color: #e3cfcc;
 }
 
 .cid-rU8OsMVaLa {
@@ -192,10 +227,10 @@ textarea {
 
 .card-wrapper {
   a {
-    color: #656565;
+    color: #181818;
 
     &:hover, &:focus {
-      color: #274abb;
+      color: #4fc4cf;
     }
   }
 }

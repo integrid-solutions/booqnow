@@ -1,5 +1,5 @@
 +++
-categories = ["Vegetables"]
+categories = ["Groceries"]
 delivery = "Yes"
 description = "Vegmandu is an initiative that strive to deliver fresh vegetable and fruits at your doorstep."
 location = "Nakhipot, Lalitpur"
