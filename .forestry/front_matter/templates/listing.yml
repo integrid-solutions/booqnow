@@ -65,7 +65,7 @@ fields:
       file: 
       path: 
   label: Delivery
-- name: category
+- name: categories
   type: list
   config:
     use_select: false
@@ -73,6 +73,6 @@ fields:
     max: 
     source:
       type: simple
-  label: Category
+  label: Categories
 pages:
 - content/listings/dalle-restaurant.md
