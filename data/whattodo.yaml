@@ -9,5 +9,6 @@ services:
   description: You know anybody is providing service in your area, kindly add from
     the link above. Another needy one might get help from it.
 - icon: mbri-clock
-  title: Make a Booking
-  description: Contact directly to the services owner
+  title: Are you a service Provider?
+  description: Do you own any service or you are thinking of or is providing any services?
+    You can list it here from above link.
