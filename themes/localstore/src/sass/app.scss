@@ -1,5 +1,5 @@
 body {
-  background: #eeeeee;
+  background: #767676;
 }
 
 .cid-rU8RJnzHx1 {
@@ -77,9 +77,13 @@ body {
   }
 }
 
-.cid-rU8O0b3nHD .text-box p.list-description {
-  margin-top: 16px;
-  color: #656565;
+.cid-rU8O0b3nHD .text-box {
+  min-height: 300px;
+
+  p.list-description {
+    margin-top: 16px;
+    color: #656565;
+  }
 }
 
 .cid-rU8O0b3nHD .card-wrapper {
@@ -172,6 +176,7 @@ textarea {
     background: #fff;
     font-size: 20px;
     display: inline-block;
+    margin: 0 8px 8px 0;
   }
 
   .count {

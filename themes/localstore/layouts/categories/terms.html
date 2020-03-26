@@ -6,8 +6,8 @@
             <h2>All {{.Title}}</h2>
         </div>
         <div class="section-content">
-            {{ range .Data.Terms.Alphabetical }}
             <div class="d-flex">
+            {{ range .Data.Terms.Alphabetical }}
                 <div class="category-card rounded">
                     <a href="{{ .Page.Permalink }}"
                        class=""
@@ -16,8 +16,8 @@
                         <span class="count">({{.Count}})</span>
                     </a>
                 </div>
-            </div>
             {{end}}
+            </div>
         </div>
     </div>
 </section>
