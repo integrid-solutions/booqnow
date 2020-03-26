@@ -5,8 +5,9 @@ services:
   description: Start searching the services you are looking for. Filter by categories
     or simply look for it in the listing.
 - icon: mbri-rocket
-  title: Choose a Category
-  description: Select a category and choose the best services
+  title: Anybody providing service in your area?
+  description: You know anybody is providing service in your area, kindly add from
+    the link above. Another needy one might get help from it.
 - icon: mbri-clock
   title: Make a Booking
   description: Contact directly to the services owner
