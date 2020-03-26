@@ -2,27 +2,28 @@
 <section class="section-inner form">
     <div class="custom-container">
         <div class="section-inner-title">
-            <h2>Add New Service</h2>
+            <h2>Add / Update Service</h2>
+            <p>Add new service or post updated information of existing service that is already listed here.</p>
         </div>
         <div class="add-service-form">
             <form name="contact" method="POST" data-netlify="true">
                 <div class="form-group required">
-                    <label>Service Name</label>
+                    <label>Service Title</label>
                     <input type="text" name="name" required />
                 </div>
 
                 <div class="form-group required">
-                    <label>Service Detail</label>
+                    <label>Decribe a bit about service</label>
                     <textarea name="detail" id="" cols="30" rows="5" required></textarea>
                 </div>
 
                 <div class="form-group">
-                    <label>Service Photo Link</label>
+                    <label>Link to the photo of service</label>
                     <input type="text" name="photo" />
                 </div>
 
                 <div class="form-group required">
-                    <label>Location</label>
+                    <label>Service Location</label>
                     <input type="text" name="location" required />
                 </div>
 
@@ -36,10 +37,10 @@
                         </div>
                         <div class="form-group-list">
                             <label>Website</label>
-                            <input type="text" name="website" placeholder="http://yourwebsite.com" />
+                            <input type="text" name="website" />
                         </div>
                         <div class="form-group-list">
-                            <label>Facebook Link</label>
+                            <label>Facebook Page/Group Link</label>
                             <input type="text" name="facebook" />
                         </div>
                         <div class="form-group-list">
@@ -50,7 +51,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Delivery Available</label>
+                    <label>Delivery Available ?</label>
                     <select name="delivery[]">
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -58,7 +59,7 @@
                 </div>
 
                 <div class="form-submit text-center">
-                    <button class="btn btn-primary" type="submit">Send</button>
+                    <button class="btn btn-primary" type="submit">Submit</button>
                 </div>
             </form>
         </div>

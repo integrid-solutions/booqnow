@@ -2,6 +2,20 @@
 
 {{ partial "hero" .}}
 
-{{ partial "listings" .}}
+<section class="features4 cid-rU8O0b3nHD" id="features04-3">
+    <div class="container">
+        <h2 class="mbr-section-title pb-1 mbr-normal mbr-fonts-style align-left display-2">Service Listings</h2>
+        <div class="row row-content load-more-wrapper">
+            {{ $paginator := .Paginate  ( where .Site.RegularPages "Type" "listings") }}
+            {{ range $paginator.Pages }}
+            {{ partial "listitem" .}}
+            {{ end }}
+
+            {{ if and (gt $paginator.TotalPages 1) ($paginator.HasNext) }}
+            <a class="loadmore-btn" href="{{ $paginator.Next.URL }}">Load More</a>
+            {{ end }}
+        </div>
+    </div>
+</section>
 
 {{ end }}

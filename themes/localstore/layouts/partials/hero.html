@@ -3,36 +3,37 @@
     <div class="container">
         <div class="media-container-row">
             <div class="mb-4 content-container" style="width: 100%;">
-                <h1 class="mbr-section-title pb-3 mbr-fonts-style display-1">Welcome to <strong>{{ .Site.Title }}!</strong></h1>
-                <p class="mbr-text pb-3 mbr-fonts-style display-5">❤️ Several services around different places of Kathmandu, Lalitpur and Bhaktapur have closed due to COVID-19. But many are still open for business, employing hundreds in the city, through pickup and delivery options. #supportlocalnepal ❤️<br><br>You can submit your favourite local services if you don't see it.<br></p>
+                <h1 class="mbr-section-title pb-3 mbr-fonts-style display-1">
+                    Welcome to <strong>{{ .Site.Title }}!</strong>
+                </h1>
+                {{ with .Site.Data.hero }}
+                <p class="mbr-text pb-3 mbr-fonts-style display-5">
+                    {{ with .line1 }}
+                    {{ . | safeHTML }} <br><br>
+                    {{ end }}
+
+                    {{ with .line2 }}
+                    {{ . | safeHTML }} <br>
+                    {{ end }}
+                </p>
+                {{ end }}
                 <div class="mbr-section-btn pb-5">
                     <a class="btn btn-md btn-primary btn-bgr display-5" href="/add-service">
-                        <span class="mbrib-rocket mbr-iconfont mbr-iconfont-btn"></span> SUBMIT NEW SERVICES</a>
+                        <span class="mbrib-rocket mbr-iconfont mbr-iconfont-btn"></span> ADD / UPDATE SERVICES</a>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="container-boxes mbr-white">
+        {{ range .Site.Data.whattodo.services }}
         <div class="box-item">
             <div class="icon-block-top pb-4">
-                <span class="mbr-iconfont mbri-mobile display-2"></span>
+                <span class="mbr-iconfont {{ .icon }} display-2"></span>
             </div>
-            <h4 class="box-item-title pb-3 mbr-fonts-style display-5">Find Interesting Services</h4>
-            <p class="box-item-text mbr-fonts-style display-7">Start searching the best services&nbsp;</p>
+            <h4 class="box-item-title pb-3 mbr-fonts-style display-5">{{ .title | safeHTML }}</h4>
+            <p class="box-item-text mbr-fonts-style display-7">{{ .description | safeHTML }}</p>
         </div>
-        <div class="box-item">
-            <div class="icon-block-top pb-4">
-                <span class="mbr-iconfont mbri-rocket display-2"></span>
-            </div>
-            <h4 class="box-item-title pb-3 mbr-fonts-style display-5">Choose a Category</h4>
-            <p class="box-item-text mbr-fonts-style display-7">Select a category and choose the best services&nbsp;</p>
-        </div>
-        <div class="box-item">
-            <div class="icon-block-top pb-4">
-                <span class="mbr-iconfont mbri-clock display-2"></span>
-            </div>
-            <h4 class="box-item-title pb-3 mbr-fonts-style display-5">Make a Booking</h4>
-            <ul class="box-list">Contact directly to the services owner</ul>
-        </div>
+        {{ end }}
     </div>
 </section>
