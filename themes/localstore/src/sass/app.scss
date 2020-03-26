@@ -43,7 +43,7 @@ body {
 }
 
 .section-content {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .mbr-section-btn a.btn:not(.btn-form) {
@@ -171,7 +171,9 @@ textarea {
     border-radius: 4px;
     background: #fff;
     font-size: 20px;
+    display: inline-block;
   }
+
   .count {
     margin-left: 8px;
     display: inline-block;

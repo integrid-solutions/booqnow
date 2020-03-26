@@ -2,15 +2,15 @@
 <meta name="googlebot" content="index,follow" />
 
 <!--Title Tags-->
-<title itemprop="name">{{ with .Params.service_name }} {{ . }} | {{ end }} {{ .Site.Title }} </title>
-<meta property="og:title" content="{{ with .Params.service_name }} {{ . }} | {{ end }} {{ .Site.Title }} " />
-<meta name="twitter:title" content="{{ with .Params.service_name }} {{ . }} | {{ end }} {{ .Site.Title }} " />
-<meta itemprop="name" content="{{ with .Params.service_name }} {{ . }} | {{ end }} {{ .Site.Title }} " />
-<meta name="application-name" content="{{ with .Params.service_name }} {{ . }} | {{ end }} {{ .Site.Title }} " />
+<title itemprop="name">{{ with .Params.Title }} {{ . }} | {{ end }} {{ .Site.Title }} </title>
+<meta property="og:title" content="{{ with .Params.Title }} {{ . }} | {{ end }} {{ .Site.Title }} " />
+<meta name="twitter:title" content="{{ with .Params.Title }} {{ . }} | {{ end }} {{ .Site.Title }} " />
+<meta itemprop="name" content="{{ with .Params.Title }} {{ . }} | {{ end }} {{ .Site.Title }} " />
+<meta name="application-name" content="{{ with .Params.Title }} {{ . }} | {{ end }} {{ .Site.Title }} " />
 <meta property="og:site_name" content="{{ .Site.Params.sitename }}" />
 
 <!--Description Tags-->
-{{ with .Params.excerpt }}
+{{ with .Params.description }}
 <meta name="description" content="{{ . }}" />
 <meta itemprop="description" content="{{ . }}" />
 <meta property="og:description" content="{{ . }}" />
@@ -60,6 +60,7 @@
 {{ if .IsHome }}
 <meta property="og:type" content="website" />
 <meta name="author" content="{{ .Site.Params.author }}" />
+<meta name="description" content="{{ .Site.Params.description }}" />
 <script defer type="application/ld+json">
     {
         "@context": "http://schema.org",
@@ -70,7 +71,7 @@
             "{{ .Site.Params.github }}"
         ],
         "name": "{{ .Title }}",
-        "logo": "https://www.example.com/images/brand/favicon.png"
+        "logo": "https://www.booqnow.com/img/site-banner.jpg"
     }
 </script>
 
@@ -111,7 +112,7 @@
     {
         "@context": "http://schema.org",
         "@type": "Article",
-        "headline": {{ .Params.blog_title }},
+        "headline": {{ .Params.Title }},
         "author": {
         "@type": "Person",
         "name": "{{ .Site.Params.github }}"
@@ -130,7 +131,7 @@
             "name": "{{ .Site.Title }}",
             "logo": {
                 "@type": "imageObject",
-                "url": "https://www.example.com/images/brand/favicon.png"
+                "url": "https://www.booqnow.com/img/site-banner.jpg"
             }
         }
     }
@@ -142,8 +143,8 @@
 <meta name="twitter:creator" content="{{ .Site.Params.twitter }}" />
 
 <!-- Theme Color -->
-<meta name="theme-color" content="#333333" />
-<meta name="msapplication-TileColor" content="#333333" />
+<meta name="theme-color" content="#274ABB" />
+<meta name="msapplication-TileColor" content="#274ABB" />
 
 {{ with .Params.tags }}
 <meta name="keywords" content="{{.}}" />

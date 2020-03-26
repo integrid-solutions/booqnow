@@ -1,4 +1,26 @@
-baseURL = "/"
+baseURL = "https://www.booqnow.com/"
+title= "BooqNow"
+pygmentsstyle= 'monokai'
+paginate= 9
+theme= "localstore"
 languageCode = "en-us"
-title = "BooqNow"
-theme = "localstore"
+DefaultContentLanguage = "en"
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+canonifyURLs = true
+
+[params]
+  author = "BooqNow"
+  description = "❤️ As we know, Services in the City of Kathmandu, Lalitpur and Bhaktapur have closed for dining due to COVID-19. But many are still open for business, employing hundreds in the city, through pickup and delivery options. #supportlocalnepal ❤️"
+  github = ""
+  facebook = ""
+  og_image = "/img/site-banner.jpg"
+  sitename = "Booqnow"
+  twitter = ""
+
+[languages]
+  [languages.en]
+  languageName = "English"
+  languageCode = "en-us"
+  weight = 1
