@@ -9,6 +9,6 @@ service_name = "Jeevee"
 [contact]
 email = ""
 phone = "014440109"
-website = "www.jeevee.com.np"
+website = "https://jeevee.com/"
 
 +++
