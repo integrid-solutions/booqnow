@@ -75,6 +75,7 @@ fields:
       type: simple
   label: Categories
 pages:
+- content/listings/bhatbhateni.md
 - content/listings/jeevee.md
 - content/listings/salesberry.md
 - content/listings/vegmandu.md
