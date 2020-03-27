@@ -7,7 +7,7 @@ photo_link = ""
 service_name = "Online Psychological Counseling"
 [contact]
 email = ""
-phone = nil
+phone = 0
 website = "https://www.facebook.com/mdpcnepal"
 
 +++
