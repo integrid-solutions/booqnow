@@ -30,16 +30,6 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: phone
-    type: number
-    label: Phone
-    description: ''
-    default: 0
-    required: true
-    config:
-      min: 
-      max: 
-      step: 
   - name: website
     type: text
     config:
@@ -50,6 +40,11 @@ fields:
     config:
       required: false
     label: Email
+  - name: phone
+    type: text
+    config:
+      required: false
+    label: Phone
   label: Contact
 - name: delivery
   type: select
