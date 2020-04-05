@@ -20,46 +20,49 @@
                 {{.Params.description}}
             </p>
         </div>
-        <div class="p-box">
-            <p class="mbr-text mbr-fonts-style mbr-normal card-text display-4">
-                {{ with .Params.categories }}
-                {{ range . }}
-                <a title="{{.}}" class="category"
-                    href="{{"categories/" | absURL }}{{ . | urlize }}"><span>{{ . }}</span></a>
-                {{ end }}
-                {{ end }}
-            </p>
-            <p class="mbr-text mbr-fonts-style mbr-normal card-text display-4" style="display: flex;
+        <div>
+            <div class="p-box">
+                <p class="mbr-text mbr-fonts-style mbr-normal card-text display-4">
+                    {{ with .Params.categories }}
+                    {{ range . }}
+                    <a title="{{.}}" class="category"
+                       href="{{"categories/" | absURL }}{{ . | urlize }}"><span>{{ . }}</span></a>
+                    {{ end }}
+                    {{ end }}
+                </p>
+                <p class="mbr-text mbr-fonts-style mbr-normal card-text display-4" style="display: flex;
 align-items: center">
-                <span class="mr-2 mbr-iconfont mbr-iconfont-social ico2 mbri-delivery"></span>
-                <span class="{{.Params.delivery}}"> Delivery
+                    <span class="mr-2 mbr-iconfont mbr-iconfont-social ico2 mbri-delivery"></span>
+                    <span class="{{.Params.delivery}}"> Delivery
                     <span class="mbr-text mbr-fonts-style mbr-normal display-4"></span>
                     {{.Params.delivery}}</span>
-            </p>
-        </div>
-        <div class="ico-wrap">
-            {{ if .Params.contact.phone}}
-            <div class="ico-box">
-                <span class="px-2 mbr-iconfont mbr-iconfont-social ico2 mbri-mobile"></span>
-                <p class="mbr-text mbr-fonts-style phone mbr-normal display-4">
-                    <a href="tel:{{.Params.contact.phone}}" title="{{.Params.contact.phone}}">
-                        {{.Params.contact.phone}}
-                    </a>
                 </p>
             </div>
-            {{ end }}
+            {{ if or (.Params.contact.phone) (.Params.contact.email) }}
+            <div class="ico-wrap">
+                {{ if .Params.contact.phone }}
+                <div class="ico-box">
+                    <span class="px-2 mbr-iconfont mbr-iconfont-social ico2 mbri-mobile"></span>
+                    <p class="mbr-text mbr-fonts-style phone mbr-normal display-4">
+                        <a href="tel:{{.Params.contact.phone}}" title="{{.Params.contact.phone}}">
+                            {{.Params.contact.phone}}
+                        </a>
+                    </p>
+                </div>
+                {{ end }}
 
-            {{ if .Params.contact.email }}
-            <div class="ico-box">
-                <span class="px-2 mbr-iconfont mbr-iconfont-social ico2 mbri-paper-plane"></span>
-                <p class="mbr-text pr-2 mbr-fonts-style phone mbr-normal display-4">
-                    <a href="mailto:{{.Params.contact.email}}" target="_blank" title="{{.Params.contact.email}}">
-                        Email
-                    </a>
-                </p>
+                {{ if .Params.contact.email }}
+                <div class="ico-box">
+                    <span class="px-2 mbr-iconfont mbr-iconfont-social ico2 mbri-paper-plane"></span>
+                    <p class="mbr-text pr-2 mbr-fonts-style phone mbr-normal display-4">
+                        <a href="mailto:{{.Params.contact.email}}" target="_blank" title="{{.Params.contact.email}}">
+                            Email
+                        </a>
+                    </p>
+                </div>
+                {{ end }}
             </div>
             {{ end }}
-
         </div>
     </div>
 </div>

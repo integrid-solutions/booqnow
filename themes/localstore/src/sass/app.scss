@@ -1,5 +1,7 @@
 body {
-  background: #767676;
+  background: #7c92d9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .cid-rU8RJnzHx1 {
@@ -26,18 +28,23 @@ body {
   }
 
   .card-title2 {
-    font-size: 24px;
-    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 8px;
   }
 
   .text-box {
-    min-height: 300px;
+    min-height: 250px;
 
     p.list-description {
       margin-top: 16px;
       color: #2e2e2e;
       line-height: 26px;
     }
+  }
+
+  .card {
+    margin-bottom: 0;
   }
 
   .card-text {
@@ -47,6 +54,26 @@ body {
   .card-wrapper {
     background: #ffffff;
     box-shadow: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .category {
+      background: #dbe3ff;
+      padding: 4px 8px;
+      border-radius: 30px;
+      font-size: 12px;
+
+      &:hover, &:focus {
+        background: #3b5ac0;
+        color: #fff;
+      }
+    }
+  }
+
+  .ico2 {
+    color: #484848;
   }
 
   .p-box {
@@ -127,7 +154,7 @@ body {
 }
 
 .cid-rU8OsMVaLa {
-  background-color: #767676;
+  background-color: #7c92d9;
 }
 
 .cid-rU8OsMVaLa .text-copyright {
@@ -234,5 +261,13 @@ textarea {
       color: #274abb;
     }
   }
+}
+
+.Yes {
+  color: #4CAF50;
+}
+
+.No {
+  color: #F44336;
 }
 
