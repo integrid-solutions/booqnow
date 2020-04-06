@@ -1,13 +1,13 @@
 +++
-categories = ["Food Delivery Service"]
+categories = []
 delivery = "Yes"
-description = "It's not the situation we chose to be in, but we can choose to stay home and come out of this quicker. We are #DeliveringEssentials! Food Delivery shall resume soon too!\nWe have updated items available with us and our customer care shall remain open from 10AM till 5PM everyday! Orders are fulfilled within 24 hours!"
-location = "Chakupat, Lalitpur"
+description = "By Khaanpin Night Food Delivery.\n\nWe are #DeliveringEssentials like groceries and other items. Food Delivery shall resume soon too!\nWe have updated items available with us at khaanpin.com/shop\nand our customer care shall remain open from 10 AM till 5 PM every day! Orders are fulfilled within 24 hours!\n\n#stayHome #staySafe #hamiChauNi"
+location = "Kathmandu and Pokhara"
 photo_link = ""
-service_name = "Khaanpin Night Food Delivery"
+service_name = "Khaanpin Essential"
 [contact]
 email = "admin@khaanpin.com"
-phone = "980-1225225"
+phone = "+977-980-1225225"
 website = "https://khaanpin.com/shop/"
 
 +++
