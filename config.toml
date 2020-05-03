@@ -1,4 +1,4 @@
-baseURL = "https://www.booqnow.com/"
+baseURL = ""
 title= "BooqNow"
 pygmentsstyle= 'monokai'
 paginate= 50
